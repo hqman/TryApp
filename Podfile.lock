@@ -1,0 +1,102 @@
+PODS:
+  - AFNetworking (2.5.3):
+    - AFNetworking/NSURLConnection (= 2.5.3)
+    - AFNetworking/NSURLSession (= 2.5.3)
+    - AFNetworking/Reachability (= 2.5.3)
+    - AFNetworking/Security (= 2.5.3)
+    - AFNetworking/Serialization (= 2.5.3)
+    - AFNetworking/UIKit (= 2.5.3)
+  - AFNetworking/NSURLConnection (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.3)
+  - AFNetworking/Security (2.5.3)
+  - AFNetworking/Serialization (2.5.3)
+  - AFNetworking/UIKit (2.5.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0):
+    - CocoaLumberjack/Default
+  - hpple (0.2.0)
+  - JDStatusBarNotification (1.4.9)
+  - Mantle (2.0):
+    - Mantle/extobjc (= 2.0)
+  - Mantle/extobjc (2.0)
+  - MBProgressHUD (0.9.1)
+  - MMMarkdown (0.4.3)
+  - ODRefreshControl (1.1.0)
+  - RDVTabBarController (1.1.9)
+  - ReactiveCocoa (2.1.8):
+    - ReactiveCocoa/Core (= 2.1.8)
+    - ReactiveCocoa/no-arc (= 2.1.8)
+  - ReactiveCocoa/Core (2.1.8):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.1.8)
+  - RegexKitLite (4.0)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - TPKeyboardAvoiding (1.2.6)
+  - TTTAttributedLabel (1.10.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BlocksKit (~> 2.2.5)
+  - CocoaLumberjack
+  - hpple (~> 0.2.0)
+  - JDStatusBarNotification (~> 1.4.9)
+  - Mantle
+  - MBProgressHUD (~> 0.9)
+  - MMMarkdown (~> 0.3)
+  - ODRefreshControl (~> 1.1.0)
+  - RDVTabBarController
+  - ReactiveCocoa (~> 2.1.8)
+  - RegexKitLite (~> 4.0)
+  - SDWebImage (~> 3.7.1)
+  - TPKeyboardAvoiding (~> 1.2.4)
+  - TTTAttributedLabel (~> 1.10.1)
+
+SPEC CHECKSUMS:
+  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  JDStatusBarNotification: 373d8fcdc8d17e59babb818271c63c9a2f030ba4
+  Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MMMarkdown: faacc823952c6b63e85c6d2fd386f8ceab805430
+  ODRefreshControl: 4c4c413bf70d2ea0c02a28ac0a0b3b4bf4dbfdea
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  TPKeyboardAvoiding: ee4dd35e3bb7bb64bfbda47e7cc9ba872ff10f77
+  TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
+
+COCOAPODS: 0.37.0

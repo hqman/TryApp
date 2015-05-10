@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FavoratiesVC.h
 //  Try_01
 //
 //  Created by hqman on 15/4/21.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FavoratiesVC : UIViewController
 
 @end
-
