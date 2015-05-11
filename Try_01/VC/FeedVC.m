@@ -13,10 +13,12 @@
 
 #import "RACEXTScope.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-
+#import "UIActionSheet+Common.h"
 #import "HWApi.h"
 
 #import "Masonry.H"
+
+#import "ListVC.h"
 // 类内部 使用 常量 kXXX 不对外公开
 
 static const NSTimeInterval kAnimationDuration = 0.3;
@@ -79,11 +81,18 @@ static const NSTimeInterval kAnimationDuration = 0.3;
     _mainContent2.textColor = [UIColor colorWithRed:0.841 green:1.000 blue:0.781 alpha:1.000];
     
     
-    // @weakify(self)   //[_mainContent mas_]
+    @weakify(self);   //[_mainContent mas_]
     [self.view addSubview:_mainContent];
     [self.view addSubview:_mainContent2];
+    
+    
+    [self setUpTests];
 
     WS(ws)
+    
+    
+    
+    
     [_mainContent mas_makeConstraints:^(MASConstraintMaker *make) {
         //make.center.equalTo(ws.view);
         make.top.equalTo(@150);//.with.offset(350);
@@ -92,7 +101,7 @@ static const NSTimeInterval kAnimationDuration = 0.3;
        // make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
         make.width.equalTo(_mainContent2.mas_width);
         make.height.equalTo(_mainContent2.mas_height);
-        make.height.equalTo(@200);
+        make.height.equalTo(@100);
     }];
     
     
@@ -105,7 +114,7 @@ static const NSTimeInterval kAnimationDuration = 0.3;
         //make.width.equalTo(ws.view.mas_width/2-10);
         make.width.equalTo(_mainContent.mas_width);
         make.height.equalTo(_mainContent.mas_height);
-         make.height.equalTo(@200);
+         make.height.equalTo(@100);
 
     }];
     
@@ -341,14 +350,79 @@ static const NSTimeInterval kAnimationDuration = 0.3;
 -(void)viewWillDisappear:(BOOL)animated{
     NSLog(@"viewWillDisappear....     ");
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Tests
+
+-(void) setUpActionSheet{
+    __weak typeof(self) weakSelf = self;
+    UIActionSheet *actionSheet = [UIActionSheet bk_actionSheetWithTitle:nil];
+    [actionSheet bk_addButtonWithTitle:@"do1" handler:nil];
+    [actionSheet bk_addButtonWithTitle:@"do2" handler:nil];
+    [actionSheet bk_setCancelButtonWithTitle:@"取消" handler:nil];
+    [actionSheet bk_setDidDismissBlock:^(UIActionSheet *sheet, NSInteger index) {
+        switch (index) {
+            case 0:
+               NSLog(@" do1 " );
+                break;
+            case 1:
+                 NSLog(@" do2 " );
+                break;
+            default:
+                break;
+        }
+    }];
+    [actionSheet showInView:weakSelf.view];
 }
-*/
+
+-(void) setUpTests{
+     @weakify(self);
+    UIButton *testList =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [testList setTitle:@"list测试" forState:UIControlStateNormal];
+    
+    
+    [[testList rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         // @strongify(self);
+         ListVC *list=[ListVC new];
+         [self.navigationController pushViewController:list animated:YES];
+     }];
+    
+    UIButton *testList2 =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [testList2 setTitle:@"actionsheet测试" forState:UIControlStateNormal];
+    
+    
+    [[testList2 rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+          @strongify(self);
+         [self setUpActionSheet];
+     }];
+    [self.view addSubview:testList];
+      [self.view addSubview:testList2];
+    
+    
+    
+    
+    [testList mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.center.equalTo(ws.view);
+        make.top.equalTo(@350);//.with.offset(350);
+        //make.right.equalTo(_mainContent2.mas_left).offset(-5);
+        make.left.equalTo(self.view).with.offset(5);
+        // make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        make.width.equalTo(@60);
+        make.height.equalTo(@40);
+    }];
+    
+    [testList2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.center.equalTo(ws.view);
+        make.top.equalTo(@380);//.with.offset(350);
+        //make.right.equalTo(_mainContent2.mas_left).offset(-5);
+        make.left.equalTo(self.view).with.offset(5);
+        // make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        make.width.equalTo(@60);
+        make.height.equalTo(@40);
+    }];
+    
+  
+}
 
 @end

@@ -10,8 +10,13 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "Person.h"
 #import "HWItemCell.h"
-
+#import "MBProgressHUD.h"
 static NSString *CellIdentifier = @"HWItemCell";
+
+
+typedef int (^CompleteHandler)(UIImageView *image_view);
+
+
 @interface FavoratiesVC ()<UITableViewDataSource>
 @property (strong ,nonatomic) UILabel * aLabel;
 
@@ -24,9 +29,19 @@ static NSString *CellIdentifier = @"HWItemCell";
     [super viewDidLoad];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
      
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = @"Loading...";
+    //定义一个block
+    [self setUpImageView:^int(UIImageView *image_view) {
+        sleep(3);
+        [hud hide:YES];
+        NSLog(@" %@ ",image_view.image);
+        return 1;
+    }];
     
     
-    //[self setUpImageView];
+   
     
 //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     UINib *nib=[UINib nibWithNibName:CellIdentifier bundle:nil];
@@ -76,6 +91,11 @@ static NSString *CellIdentifier = @"HWItemCell";
     tableView.rowHeight=100;
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150;
+    
+}
     
 /*
 #pragma mark - Navigation
@@ -90,8 +110,29 @@ static NSString *CellIdentifier = @"HWItemCell";
 
 
 
+-(void)test{
+    //定义
+    void (^MyBlock)(id,NSUInteger ,BOOL*)=^(id obj,NSUInteger idx ,BOOL *stop){
+        NSLog(@" %@ ",obj);
+    };
+    //使用
+    BOOL stop;
+    MyBlock(@"ttt",1,&stop);
+    
+    //作为方法参数
+    NSArray *citys=@[@"suzhou",@"hangzhou"];
+    [citys enumerateObjectsUsingBlock:MyBlock];
+    
+    //内联用法
+    [citys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@" %@ ",obj);
+    }];
 
--(void) setUpImageView {
+    
+}
+//-(void) setUpImageView : (int (^)(UIImageView *image_view)) completionCallback{
+-(void) setUpImageView : (CompleteHandler) completionCallback{
+
     
     
     // 1
@@ -120,8 +161,10 @@ static NSString *CellIdentifier = @"HWItemCell";
                        NSLog(@"mmmmmmm%@",downloadedImage);
                        [self.view addSubview:_imageView];
                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-
-
+                       //call block
+                       int back=completionCallback(_imageView);
+                       NSLog(@" %d",back);
+                       
                    }); }];
     // 4
     [getImageTask resume];

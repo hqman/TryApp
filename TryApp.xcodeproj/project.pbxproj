@@ -10,6 +10,7 @@
 		E1EFA1CD8C73CE2A9FA0E6D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866C9EB5969A4CB0C26C572 /* libPods.a */; };
 		E511A3DB1B00450500B86A5B /* HWCricleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E511A3DA1B00450500B86A5B /* HWCricleView.m */; };
 		E52A56FC1AEB3A63006EA890 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A56FB1AEB3A63006EA890 /* Person.m */; };
+		E538C7B61B005CFB000CFC42 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E538C7B51B005CFB000CFC42 /* AssetsLibrary.framework */; };
 		E5415C261AE616360040997F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C251AE616360040997F /* main.m */; };
 		E5415C291AE616360040997F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C281AE616360040997F /* AppDelegate.m */; };
 		E5415C2F1AE616360040997F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5415C2D1AE616360040997F /* Main.storyboard */; };
@@ -18,6 +19,11 @@
 		E5415C401AE616360040997F /* Try_01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C3F1AE616360040997F /* Try_01Tests.m */; };
 		E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E56181191B008CE100DF80D5 /* ScrollVC.m */; };
 		E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */; };
+		E562BD651B048D3A00E9BA20 /* ListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E562BD631B048D3A00E9BA20 /* ListVC.m */; };
+		E562BD661B048D3A00E9BA20 /* ListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E562BD641B048D3A00E9BA20 /* ListVC.xib */; };
+		E562BD6A1B048D4A00E9BA20 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E562BD681B048D4A00E9BA20 /* DetailVC.m */; };
+		E562BD6B1B048D4A00E9BA20 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E562BD691B048D4A00E9BA20 /* DetailVC.xib */; };
+		E562BDA51B048D4A00E9BA20 /* UIActionSheet+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E562BDA41B048D4A00E9BA20 /* UIActionSheet+Common.m */; };
 		E577F8031B01DB73002CC800 /* HWLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E577F8021B01DB73002CC800 /* HWLayoutVC.m */; };
 		E58170401AF9A23100661F73 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581703F1AF9A23000661F73 /* SenTestingKit.framework */; };
 		E598B4FF1B03468700799ED6 /* Testt.xib in Resources */ = {isa = PBXBuildFile; fileRef = E598B4FE1B03468700799ED6 /* Testt.xib */; };
@@ -63,6 +69,7 @@
 		E511A3DA1B00450500B86A5B /* HWCricleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCricleView.m; sourceTree = "<group>"; };
 		E52A56FA1AEB3A63006EA890 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E52A56FB1AEB3A63006EA890 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E538C7B51B005CFB000CFC42 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E5415C201AE616360040997F /* TryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5415C241AE616360040997F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5415C251AE616360040997F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +85,14 @@
 		E56181191B008CE100DF80D5 /* ScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
 		E561811B1B009E1B00DF80D5 /* HWCenteredScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCenteredScrollView.h; sourceTree = "<group>"; };
 		E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCenteredScrollView.m; sourceTree = "<group>"; };
+		E562BD621B048D3A00E9BA20 /* ListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListVC.h; sourceTree = "<group>"; };
+		E562BD631B048D3A00E9BA20 /* ListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListVC.m; sourceTree = "<group>"; };
+		E562BD641B048D3A00E9BA20 /* ListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListVC.xib; sourceTree = "<group>"; };
+		E562BD671B048D4A00E9BA20 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		E562BD681B048D4A00E9BA20 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		E562BD691B048D4A00E9BA20 /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		E562BDA31B048D4A00E9BA20 /* UIActionSheet+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Common.h"; sourceTree = "<group>"; };
+		E562BDA41B048D4A00E9BA20 /* UIActionSheet+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Common.m"; sourceTree = "<group>"; };
 		E577F8011B01DB73002CC800 /* HWLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLayoutVC.h; sourceTree = "<group>"; };
 		E577F8021B01DB73002CC800 /* HWLayoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLayoutVC.m; sourceTree = "<group>"; };
 		E581703F1AF9A23000661F73 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E538C7B61B005CFB000CFC42 /* AssetsLibrary.framework in Frameworks */,
 				E1EFA1CD8C73CE2A9FA0E6D7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +172,7 @@
 		988C66273BDA3E3CB0A615C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E538C7B51B005CFB000CFC42 /* AssetsLibrary.framework */,
 				E5A09CE31AFF007300F1519B /* libPods.a */,
 				E581703F1AF9A23000661F73 /* SenTestingKit.framework */,
 				1866C9EB5969A4CB0C26C572 /* libPods.a */,
@@ -235,6 +252,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E562BD5C1B048CF400E9BA20 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				E562BD621B048D3A00E9BA20 /* ListVC.h */,
+				E562BD631B048D3A00E9BA20 /* ListVC.m */,
+				E562BD641B048D3A00E9BA20 /* ListVC.xib */,
+				E562BD671B048D4A00E9BA20 /* DetailVC.h */,
+				E562BD681B048D4A00E9BA20 /* DetailVC.m */,
+				E562BD691B048D4A00E9BA20 /* DetailVC.xib */,
+			);
+			name = list;
+			sourceTree = "<group>";
+		};
 		E5B3C1491AFA448600BC0B3C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +292,7 @@
 		E5C50BE71AE63AA80093C969 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E562BD5C1B048CF400E9BA20 /* list */,
 				E5DC57271AE6404700316FAD /* FeedVC.h */,
 				E5DC57281AE6404700316FAD /* FeedVC.m */,
 				E5C50BE91AE63AF10093C969 /* BaseViewController.h */,
@@ -299,6 +330,8 @@
 			children = (
 				E5DC57361AE64DCF00316FAD /* UIImage+Common.h */,
 				E5DC57371AE64DCF00316FAD /* UIImage+Common.m */,
+				E562BDA31B048D4A00E9BA20 /* UIActionSheet+Common.h */,
+				E562BDA41B048D4A00E9BA20 /* UIActionSheet+Common.m */,
 				E5DC57331AE64D8C00316FAD /* UIColor+expanded.h */,
 				E5F40AA21AFA1355005950D6 /* NSString+Common.h */,
 				E5F40AA31AFA1355005950D6 /* NSString+Common.m */,
@@ -416,7 +449,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5415C2F1AE616360040997F /* Main.storyboard in Resources */,
+				E562BD6B1B048D4A00E9BA20 /* DetailVC.xib in Resources */,
 				E5CC115A1AF32B1E004DF4B2 /* README.textile in Resources */,
+				E562BD661B048D3A00E9BA20 /* ListVC.xib in Resources */,
 				E598B4FF1B03468700799ED6 /* Testt.xib in Resources */,
 				E598B5431B03839000799ED6 /* HWItemCell.xib in Resources */,
 				E5415C341AE616360040997F /* LaunchScreen.xib in Resources */,
@@ -515,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E562BD651B048D3A00E9BA20 /* ListVC.m in Sources */,
 				E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */,
 				E5CC114C1AF31B44004DF4B2 /* STQuestion.m in Sources */,
 				E5DC57291AE6404700316FAD /* FeedVC.m in Sources */,
@@ -524,12 +560,14 @@
 				E5F40AA41AFA1355005950D6 /* NSString+Common.m in Sources */,
 				E577F8031B01DB73002CC800 /* HWLayoutVC.m in Sources */,
 				E5DC57321AE64AC100316FAD /* RootTabbarVC.m in Sources */,
+				E562BDA51B048D4A00E9BA20 /* UIActionSheet+Common.m in Sources */,
 				E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */,
 				E5B3C1521AFA51E800BC0B3C /* HWManager+Question.m in Sources */,
 				E5CC11521AF329C9004DF4B2 /* NSDate+Common.m in Sources */,
 				E5DC572C1AE6406D00316FAD /* FavoratiesVC.m in Sources */,
 				E5415C291AE616360040997F /* AppDelegate.m in Sources */,
 				E5DC572F1AE6407F00316FAD /* ProfileVC.m in Sources */,
+				E562BD6A1B048D4A00E9BA20 /* DetailVC.m in Sources */,
 				E5DC57351AE64D8C00316FAD /* UIColor+expanded.m in Sources */,
 				E598B5421B03839000799ED6 /* HWItemCell.m in Sources */,
 				E5CC11531AF329C9004DF4B2 /* NSDate+convenience.m in Sources */,

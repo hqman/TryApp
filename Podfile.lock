@@ -52,6 +52,7 @@ PODS:
   - MBProgressHUD (0.9.1)
   - MMMarkdown (0.4.3)
   - ODRefreshControl (1.1.0)
+  - QBImagePickerController (2.5.2)
   - RDVTabBarController (1.1.9)
   - ReactiveCocoa (2.1.8):
     - ReactiveCocoa/Core (= 2.1.8)
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9)
   - MMMarkdown (~> 0.3)
   - ODRefreshControl (~> 1.1.0)
+  - QBImagePickerController (~> 2.5.0)
   - RDVTabBarController
   - ReactiveCocoa (~> 2.1.8)
   - RegexKitLite (~> 4.0)
@@ -90,11 +92,12 @@ SPEC CHECKSUMS:
   CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   JDStatusBarNotification: 373d8fcdc8d17e59babb818271c63c9a2f030ba4
-  Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
+  Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MMMarkdown: faacc823952c6b63e85c6d2fd386f8ceab805430
   ODRefreshControl: 4c4c413bf70d2ea0c02a28ac0a0b3b4bf4dbfdea
+  QBImagePickerController: 96c2e340edb7fcac5acf21b72314fac9201ffb8e
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
@@ -102,4 +105,4 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: ee4dd35e3bb7bb64bfbda47e7cc9ba872ff10f77
   TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.37.0
