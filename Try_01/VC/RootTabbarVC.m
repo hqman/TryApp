@@ -32,8 +32,8 @@
 -(void) customizeVCs{
    // UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
-    NSArray *titles = @[@"Feed", @"Faveraties", @"Profile"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third",  @"third"];
+    NSArray *titles = @[@"Feed", @"Faveraties", @"Profile", @"Scroll"];
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[self tabBar] items]) {
         [item setBackgroundSelectedImage:unfinishedImage withUnselectedImage:unfinishedImage];

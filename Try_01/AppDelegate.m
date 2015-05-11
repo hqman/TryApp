@@ -13,6 +13,7 @@
 #import "FeedVC.h"
 #import "FavoratiesVC.h"
 #import "ProfileVC.h"
+#import "ScrollVC.h"
 #import "RootTabbarVC.h"
 
 #import "RDVTabBarItem.h"
@@ -77,19 +78,24 @@
     UIViewController *thirdNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:profileVC];
     
+    
+    UIViewController * scrollVC=(ScrollVC * )[ScrollVC new];
+    UIViewController *scrollNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:scrollVC];
+    
     RootTabbarVC *tabBarController = [[RootTabbarVC alloc] init];
     [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,
-                                           thirdNavigationController]];
+                                           thirdNavigationController,scrollNavigationController]];
     self.window.rootViewController  = tabBarController;
     [tabBarController customizeVCs];
     [self customizeInterface];
-    NSUserDefaults *nd=[NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *nd=[NSUserDefaults standardUserDefaults];
     
     
-    
-    NSDictionary *factorySettings = @{@"FavoriteGreeting": @"Hey!",@"HoursBetweenMothershipConnection" : @2};
-    [nd registerDefaults:factorySettings];
-    NSLog(@"name %@",[nd objectForKey:@"FavoriteGreeting"]);
+//    
+//    NSDictionary *factorySettings = @{@"FavoriteGreeting": @"Hey!",@"HoursBetweenMothershipConnection" : @2};
+//    [nd registerDefaults:factorySettings];
+//    NSLog(@"name %@",[nd objectForKey:@"FavoriteGreeting"]);
         [self.window makeKeyAndVisible];
     return YES;
 }

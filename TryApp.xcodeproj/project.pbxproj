@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1EFA1CD8C73CE2A9FA0E6D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866C9EB5969A4CB0C26C572 /* libPods.a */; };
+		E511A3DB1B00450500B86A5B /* HWCricleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E511A3DA1B00450500B86A5B /* HWCricleView.m */; };
 		E52A56FC1AEB3A63006EA890 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A56FB1AEB3A63006EA890 /* Person.m */; };
 		E5415C261AE616360040997F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C251AE616360040997F /* main.m */; };
 		E5415C291AE616360040997F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C281AE616360040997F /* AppDelegate.m */; };
@@ -15,6 +16,8 @@
 		E5415C311AE616360040997F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5415C301AE616360040997F /* Images.xcassets */; };
 		E5415C341AE616360040997F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5415C321AE616360040997F /* LaunchScreen.xib */; };
 		E5415C401AE616360040997F /* Try_01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C3F1AE616360040997F /* Try_01Tests.m */; };
+		E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E56181191B008CE100DF80D5 /* ScrollVC.m */; };
+		E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */; };
 		E58170401AF9A23100661F73 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581703F1AF9A23000661F73 /* SenTestingKit.framework */; };
 		E5A09CC01AFB6FD300F1519B /* RACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A09CBF1AFB6FD300F1519B /* RACTests.m */; };
 		E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C14B1AFA44AE00BC0B3C /* HWManager.m */; };
@@ -52,6 +55,8 @@
 		4A6E7E1BF4C6A3F6C6F9A030 /* Pods-Try_01Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Try_01Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Try_01Tests/Pods-Try_01Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		727BCFE3F4A07E721A664305 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8695681A748E3600938F52 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E511A3D91B00450500B86A5B /* HWCricleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCricleView.h; sourceTree = "<group>"; };
+		E511A3DA1B00450500B86A5B /* HWCricleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCricleView.m; sourceTree = "<group>"; };
 		E52A56FA1AEB3A63006EA890 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E52A56FB1AEB3A63006EA890 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E5415C201AE616360040997F /* TryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +70,10 @@
 		E5415C391AE616360040997F /* TryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5415C3E1AE616360040997F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5415C3F1AE616360040997F /* Try_01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Try_01Tests.m; sourceTree = "<group>"; };
+		E56181181B008CE100DF80D5 /* ScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollVC.h; sourceTree = "<group>"; };
+		E56181191B008CE100DF80D5 /* ScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
+		E561811B1B009E1B00DF80D5 /* HWCenteredScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCenteredScrollView.h; sourceTree = "<group>"; };
+		E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCenteredScrollView.m; sourceTree = "<group>"; };
 		E581703F1AF9A23000661F73 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E59F6AD51AF3523B00B55D5A /* TryApp.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryApp.pch; sourceTree = "<group>"; };
 		E5A09CBF1AFB6FD300F1519B /* RACTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTests.m; sourceTree = "<group>"; };
@@ -252,6 +261,8 @@
 				E5DC572E1AE6407F00316FAD /* ProfileVC.m */,
 				E5DC57301AE64AC100316FAD /* RootTabbarVC.h */,
 				E5DC57311AE64AC100316FAD /* RootTabbarVC.m */,
+				E56181181B008CE100DF80D5 /* ScrollVC.h */,
+				E56181191B008CE100DF80D5 /* ScrollVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -259,6 +270,10 @@
 		E5C50BE81AE63AA80093C969 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E561811B1B009E1B00DF80D5 /* HWCenteredScrollView.h */,
+				E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */,
+				E511A3D91B00450500B86A5B /* HWCricleView.h */,
+				E511A3DA1B00450500B86A5B /* HWCricleView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -487,8 +502,10 @@
 				E5DC57291AE6404700316FAD /* FeedVC.m in Sources */,
 				E5C50BEB1AE63AF10093C969 /* ViewController.m in Sources */,
 				E52A56FC1AEB3A63006EA890 /* Person.m in Sources */,
+				E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */,
 				E5F40AA41AFA1355005950D6 /* NSString+Common.m in Sources */,
 				E5DC57321AE64AC100316FAD /* RootTabbarVC.m in Sources */,
+				E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */,
 				E5B3C1521AFA51E800BC0B3C /* HWManager+Question.m in Sources */,
 				E5CC11521AF329C9004DF4B2 /* NSDate+Common.m in Sources */,
 				E5DC572C1AE6406D00316FAD /* FavoratiesVC.m in Sources */,
@@ -497,6 +514,7 @@
 				E5DC57351AE64D8C00316FAD /* UIColor+expanded.m in Sources */,
 				E5CC11531AF329C9004DF4B2 /* NSDate+convenience.m in Sources */,
 				E5DC57381AE64DCF00316FAD /* UIImage+Common.m in Sources */,
+				E511A3DB1B00450500B86A5B /* HWCricleView.m in Sources */,
 				E5CC11591AF32B1E004DF4B2 /* NSDate+Helper.m in Sources */,
 				E5415C261AE616360040997F /* main.m in Sources */,
 				E5B3C1551AFA569D00BC0B3C /* HWObject.m in Sources */,

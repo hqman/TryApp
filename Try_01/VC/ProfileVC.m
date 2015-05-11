@@ -10,6 +10,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "Person.h"
 #import "RACEXTScope.h"
+#import "HWCricleView.h"
+
 @interface ProfileVC ()
 
 @property (weak, nonatomic) IBOutlet UIButton *aButton;
@@ -31,6 +33,10 @@
          self.title = @"Profile";
          NSLog(@"click me");
      }];
+    //draw view
+    HWCricleView *subView=[[HWCricleView alloc]initWithFrame:self.view.bounds];
+    //subView.backgroundColor=[UIColor redColor];
+    [self.view addSubview:subView];
 }
 
 

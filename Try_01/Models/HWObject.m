@@ -51,7 +51,7 @@
 }
 
 -(void) dealloc{
-    NCLog(@"hwobject dealloc...");
+    //NCLog(@"hwobject dealloc...");
 }
 
 @end
