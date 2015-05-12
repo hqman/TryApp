@@ -16,15 +16,19 @@
 
 #import "HWApi.h"
 
-
+#import "Masonry.H"
 // 类内部 使用 常量 kXXX 不对外公开
 
 static const NSTimeInterval kAnimationDuration = 0.3;
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 
 @interface FeedVC ()
 @property (nonatomic,strong) UIActivityIndicatorView *indicator;
 @property (nonatomic,strong) UITextView *mainContent;
+@property (nonatomic,strong) UITextView *mainContent2;
+
 
 
 
@@ -59,11 +63,93 @@ static const NSTimeInterval kAnimationDuration = 0.3;
     [self.view addSubview:_indicator];
     
     
-    _mainContent= [[UITextView alloc]initWithFrame:CGRectMake(100, 200, 200, 200)];
+    //_mainContent= [[UITextView alloc]initWithFrame:CGRectMake(100, 200, 200, 200)];
+    _mainContent=  [UITextView new];
+    _mainContent.translatesAutoresizingMaskIntoConstraints=NO;
+
     _mainContent.text = @"HELLO";
     _mainContent.backgroundColor=[UIColor grayColor];
     _mainContent.textColor = [UIColor blackColor];
+    
+    _mainContent2=  [UITextView new];
+    _mainContent2.translatesAutoresizingMaskIntoConstraints=NO;
+    
+    _mainContent2.text = @"HELLO2";
+    _mainContent2.backgroundColor=[UIColor colorWithRed:0.292 green:0.500 blue:0.207 alpha:1.000];
+    _mainContent2.textColor = [UIColor colorWithRed:0.841 green:1.000 blue:0.781 alpha:1.000];
+    
+    
+    // @weakify(self)   //[_mainContent mas_]
     [self.view addSubview:_mainContent];
+    [self.view addSubview:_mainContent2];
+
+    WS(ws)
+    [_mainContent mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.center.equalTo(ws.view);
+        make.top.equalTo(ws.view).with.offset(350);
+        make.leading.equalTo(ws.view).with.offset(5);
+        make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+    }];
+    
+    
+    [_mainContent2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.center.equalTo(ws.view);
+        make.top.equalTo(ws.view).with.offset(150);
+        make.trailing.equalTo(ws.view).with.offset(-10);
+        make.size.mas_greaterThanOrEqualTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        //make.width.equalTo(ws.view.mas_width/2-10);
+    }];
+    
+    // red view top 50 width 200 left 50
+    
+    UIView *redView=[UIView new];
+    redView.backgroundColor=[UIColor redColor];
+    [self.view addSubview:redView];
+    redView.translatesAutoresizingMaskIntoConstraints   =NO;
+    
+    //高度100 蓝色 左侧 靠近 redview
+    UIView *blueView=[UIView new];
+    blueView.backgroundColor=[UIColor blueColor];
+    [self.view addSubview:blueView];
+    blueView.translatesAutoresizingMaskIntoConstraints   =NO;
+    
+    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(@50);
+        make.leading.equalTo(ws.view).with.offset(50);
+        //make.left.equalTo(sv.mas_left).with.offset(padding1);
+        
+        make.height.mas_equalTo(@50);
+        make.width.greaterThanOrEqualTo(@200);
+    }];
+    
+    [blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(@50);
+        make.leading.equalTo(redView.mas_right).with.offset(10);
+        //make.left.equalTo(sv.mas_left).with.offset(padding1);
+        
+        make.height.mas_equalTo(@100);
+        make.width.greaterThanOrEqualTo(@50);
+    }];
+    
+//    NSDictionary *views = NSDictionaryOfVariableBindings(self.view, redView,blueView);
+//    NSArray *hConstrains=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[redView(>=200)]" options:0 metrics:nil views:views];
+//    
+//    NSArray *vConstrains=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[redView(>=50)]" options:0 metrics:nil views:views];
+//    
+//    NSArray *bHConstrains=[NSLayoutConstraint constraintsWithVisualFormat:@"H:[redView]-10-[blueView(>=50)]" options:0 metrics:nil views:views];
+//    
+//    NSArray *bVConstrains=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[blueView(>=100)]" options:0 metrics:nil views:views];
+//    
+//    [self.view addConstraints:hConstrains];
+//    [self.view addConstraints:vConstrains];
+//    
+//    [self.view addConstraints:bHConstrains];
+//    [self.view addConstraints:bVConstrains];
+    
+    
+
     
     
 //    @weakify(self);

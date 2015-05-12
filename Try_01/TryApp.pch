@@ -19,4 +19,6 @@
 #define NCLog(s, ...) DDLogInfo(@"<%@:%d> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
 __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
 
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 #endif

@@ -48,6 +48,7 @@ PODS:
   - Mantle (2.0):
     - Mantle/extobjc (= 2.0)
   - Mantle/extobjc (2.0)
+  - Masonry (0.6.1)
   - MBProgressHUD (0.9.1)
   - MMMarkdown (0.4.3)
   - ODRefreshControl (1.1.0)
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - hpple (~> 0.2.0)
   - JDStatusBarNotification (~> 1.4.9)
   - Mantle
+  - Masonry
   - MBProgressHUD (~> 0.9)
   - MMMarkdown (~> 0.3)
   - ODRefreshControl (~> 1.1.0)
@@ -89,6 +91,7 @@ SPEC CHECKSUMS:
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   JDStatusBarNotification: 373d8fcdc8d17e59babb818271c63c9a2f030ba4
   Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MMMarkdown: faacc823952c6b63e85c6d2fd386f8ceab805430
   ODRefreshControl: 4c4c413bf70d2ea0c02a28ac0a0b3b4bf4dbfdea
@@ -99,4 +102,4 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: ee4dd35e3bb7bb64bfbda47e7cc9ba872ff10f77
   TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
 
-COCOAPODS: 0.37.0
+COCOAPODS: 0.35.0
