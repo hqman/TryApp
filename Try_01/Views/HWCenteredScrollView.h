@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TPKeyboardAvoidingScrollView.h"
+@interface HWCenteredScrollView : TPKeyboardAvoidingScrollView
 
-@interface HWCenteredScrollView : UIScrollView
+@property (nonatomic) float xScale;
 //居中
 -(void) centerContent;
 //设置放大比例

@@ -18,6 +18,7 @@
 		E5415C401AE616360040997F /* Try_01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5415C3F1AE616360040997F /* Try_01Tests.m */; };
 		E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E56181191B008CE100DF80D5 /* ScrollVC.m */; };
 		E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */; };
+		E577F8031B01DB73002CC800 /* HWLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E577F8021B01DB73002CC800 /* HWLayoutVC.m */; };
 		E58170401AF9A23100661F73 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581703F1AF9A23000661F73 /* SenTestingKit.framework */; };
 		E5A09CC01AFB6FD300F1519B /* RACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A09CBF1AFB6FD300F1519B /* RACTests.m */; };
 		E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C14B1AFA44AE00BC0B3C /* HWManager.m */; };
@@ -74,6 +75,8 @@
 		E56181191B008CE100DF80D5 /* ScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
 		E561811B1B009E1B00DF80D5 /* HWCenteredScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCenteredScrollView.h; sourceTree = "<group>"; };
 		E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCenteredScrollView.m; sourceTree = "<group>"; };
+		E577F8011B01DB73002CC800 /* HWLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLayoutVC.h; sourceTree = "<group>"; };
+		E577F8021B01DB73002CC800 /* HWLayoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLayoutVC.m; sourceTree = "<group>"; };
 		E581703F1AF9A23000661F73 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E59F6AD51AF3523B00B55D5A /* TryApp.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryApp.pch; sourceTree = "<group>"; };
 		E5A09CBF1AFB6FD300F1519B /* RACTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTests.m; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				E5DC57311AE64AC100316FAD /* RootTabbarVC.m */,
 				E56181181B008CE100DF80D5 /* ScrollVC.h */,
 				E56181191B008CE100DF80D5 /* ScrollVC.m */,
+				E577F8011B01DB73002CC800 /* HWLayoutVC.h */,
+				E577F8021B01DB73002CC800 /* HWLayoutVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				E52A56FC1AEB3A63006EA890 /* Person.m in Sources */,
 				E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */,
 				E5F40AA41AFA1355005950D6 /* NSString+Common.m in Sources */,
+				E577F8031B01DB73002CC800 /* HWLayoutVC.m in Sources */,
 				E5DC57321AE64AC100316FAD /* RootTabbarVC.m in Sources */,
 				E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */,
 				E5B3C1521AFA51E800BC0B3C /* HWManager+Question.m in Sources */,

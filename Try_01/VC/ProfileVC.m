@@ -11,14 +11,24 @@
 #import "Person.h"
 #import "RACEXTScope.h"
 #import "HWCricleView.h"
+#import "HWLayoutVC.h"
 
 @interface ProfileVC ()
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *aButton;
 @end
 
 @implementation ProfileVC
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Profile";
+        //self.tabBarItem.image = [UIImage imageNamed:@"first_normal"];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,9 +44,9 @@
          NSLog(@"click me");
      }];
     //draw view
-    HWCricleView *subView=[[HWCricleView alloc]initWithFrame:self.view.bounds];
+   // HWCricleView *subView=[[HWCricleView alloc]initWithFrame:self.view.bounds];
     //subView.backgroundColor=[UIColor redColor];
-    [self.view addSubview:subView];
+   // [self.view addSubview:subView];
 }
 
 
@@ -45,18 +55,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)go:(id)sender {
+    HWLayoutVC *vc=[HWLayoutVC new];
+    
+    vc.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+    vc.dismissBlock=^(NSString *backs){
+        NCLog(@" i am about to go  %@",backs);
+    };
+    [self presentViewController:vc animated:YES completion:^{
+        NCLog(@" i am about to go  ");
+    } ];
+}
+
+
  
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"Profile";
-        //self.tabBarItem.image = [UIImage imageNamed:@"first_normal"];
-    }
-    return self;
-}
+ 
 /*
 #pragma mark - Navigation
 

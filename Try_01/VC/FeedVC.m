@@ -86,18 +86,27 @@ static const NSTimeInterval kAnimationDuration = 0.3;
     WS(ws)
     [_mainContent mas_makeConstraints:^(MASConstraintMaker *make) {
         //make.center.equalTo(ws.view);
-        make.top.equalTo(ws.view).with.offset(350);
-        make.leading.equalTo(ws.view).with.offset(5);
-        make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        make.top.equalTo(@150);//.with.offset(350);
+        make.right.equalTo(_mainContent2.mas_left).offset(-5);
+        make.left.equalTo(ws.view).with.offset(5);
+       // make.size.mas_equalTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        make.width.equalTo(_mainContent2.mas_width);
+        make.height.equalTo(_mainContent2.mas_height);
+        make.height.equalTo(@200);
     }];
     
     
     [_mainContent2 mas_makeConstraints:^(MASConstraintMaker *make) {
         //make.center.equalTo(ws.view);
-        make.top.equalTo(ws.view).with.offset(150);
+        make.top.equalTo(@150);//.with.offset(150);
+        make.left.equalTo(_mainContent.mas_right).offset(5);
         make.trailing.equalTo(ws.view).with.offset(-10);
-        make.size.mas_greaterThanOrEqualTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
+        //make.size.mas_greaterThanOrEqualTo(CGSizeMake(ws.view.bounds.size.width/2-20, 300));
         //make.width.equalTo(ws.view.mas_width/2-10);
+        make.width.equalTo(_mainContent.mas_width);
+        make.height.equalTo(_mainContent.mas_height);
+         make.height.equalTo(@200);
+
     }];
     
     // red view top 50 width 200 left 50

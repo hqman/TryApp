@@ -7,15 +7,18 @@
 //
 
 #import "HWCenteredScrollView.h"
-
+#import "Masonry.h"
 @implementation HWCenteredScrollView
+
+ 
+
 
 
 -(void)layoutSubviews{
     
     [super layoutSubviews];
-    [self setScale];
-    [self centerContent];
+    //[self setScale];
+    //[self centerContent];
 }
 
 
@@ -32,8 +35,9 @@
     //_scrollView.frame=self.view.bounds;
     self.minimumZoomScale=zoomScale;
     //开始 大小比例
-    self.zoomScale=zoomScale  ;
+    self.zoomScale=zoomScale;//zoomScale  ;
     self.maximumZoomScale=3.0;
+    self.xScale=zoomScale;
      }
 
 -(void) centerContent{
