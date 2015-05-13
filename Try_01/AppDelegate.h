@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ViewController;
+@class BaseViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 
-@property (strong, nonatomic) ViewController *colorVC;
+@property (strong, nonatomic) BaseViewController *colorVC;
 @property (strong, nonatomic) UIWindow *window;
 
 

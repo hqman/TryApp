@@ -24,7 +24,7 @@
 		E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C14B1AFA44AE00BC0B3C /* HWManager.m */; };
 		E5B3C1521AFA51E800BC0B3C /* HWManager+Question.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C1511AFA51E800BC0B3C /* HWManager+Question.m */; };
 		E5B3C1551AFA569D00BC0B3C /* HWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C1541AFA569D00BC0B3C /* HWObject.m */; };
-		E5C50BEB1AE63AF10093C969 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C50BEA1AE63AF10093C969 /* ViewController.m */; };
+		E5C50BEB1AE63AF10093C969 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C50BEA1AE63AF10093C969 /* BaseViewController.m */; };
 		E5CC114C1AF31B44004DF4B2 /* STQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC114B1AF31B44004DF4B2 /* STQuestion.m */; };
 		E5CC11521AF329C9004DF4B2 /* NSDate+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC114F1AF329C9004DF4B2 /* NSDate+Common.m */; };
 		E5CC11531AF329C9004DF4B2 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC11511AF329C9004DF4B2 /* NSDate+convenience.m */; };
@@ -88,8 +88,8 @@
 		E5B3C1511AFA51E800BC0B3C /* HWManager+Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWManager+Question.m"; sourceTree = "<group>"; };
 		E5B3C1531AFA569D00BC0B3C /* HWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWObject.h; sourceTree = "<group>"; };
 		E5B3C1541AFA569D00BC0B3C /* HWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWObject.m; sourceTree = "<group>"; };
-		E5C50BE91AE63AF10093C969 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5C50BEA1AE63AF10093C969 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5C50BE91AE63AF10093C969 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E5C50BEA1AE63AF10093C969 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E5CC114A1AF31B44004DF4B2 /* STQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STQuestion.h; sourceTree = "<group>"; };
 		E5CC114B1AF31B44004DF4B2 /* STQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STQuestion.m; sourceTree = "<group>"; };
 		E5CC114E1AF329C9004DF4B2 /* NSDate+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Common.h"; path = "../../Coding-iOS/Coding_iOS/Util/OC_Category/NSDate+Common.h"; sourceTree = "<group>"; };
@@ -256,8 +256,8 @@
 			children = (
 				E5DC57271AE6404700316FAD /* FeedVC.h */,
 				E5DC57281AE6404700316FAD /* FeedVC.m */,
-				E5C50BE91AE63AF10093C969 /* ViewController.h */,
-				E5C50BEA1AE63AF10093C969 /* ViewController.m */,
+				E5C50BE91AE63AF10093C969 /* BaseViewController.h */,
+				E5C50BEA1AE63AF10093C969 /* BaseViewController.m */,
 				E5DC572A1AE6406D00316FAD /* FavoratiesVC.h */,
 				E5DC572B1AE6406D00316FAD /* FavoratiesVC.m */,
 				E5DC572D1AE6407F00316FAD /* ProfileVC.h */,
@@ -505,7 +505,7 @@
 				E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */,
 				E5CC114C1AF31B44004DF4B2 /* STQuestion.m in Sources */,
 				E5DC57291AE6404700316FAD /* FeedVC.m in Sources */,
-				E5C50BEB1AE63AF10093C969 /* ViewController.m in Sources */,
+				E5C50BEB1AE63AF10093C969 /* BaseViewController.m in Sources */,
 				E52A56FC1AEB3A63006EA890 /* Person.m in Sources */,
 				E561811A1B008CE100DF80D5 /* ScrollVC.m in Sources */,
 				E5F40AA41AFA1355005950D6 /* NSString+Common.m in Sources */,

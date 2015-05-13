@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "BaseViewController.h"
 #import  "UIColor+expanded.h"
 #import "UIImage+Common.h"
 #import "FeedVC.h"
@@ -80,6 +80,7 @@
     
     
     UIViewController * scrollVC=(ScrollVC * )[ScrollVC new];
+    scrollVC.rdv_tabBarItem.badgeValue=@"2";
     UIViewController *scrollNavigationController = [[UINavigationController alloc]
                                                     initWithRootViewController:scrollVC];
     

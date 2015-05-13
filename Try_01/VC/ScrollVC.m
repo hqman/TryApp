@@ -11,6 +11,8 @@
 #import "Masonry.h"
 #import "RACEXTScope.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
+
 @interface ScrollVC() <UIScrollViewDelegate,UITextViewDelegate>
 @property (strong ,nonatomic) HWCenteredScrollView * scrollView;
 @property (strong ,nonatomic) UIView * imageView;
@@ -24,14 +26,19 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Scroll";
-        //self.tabBarItem.image = [UIImage imageNamed:@"first_normal"];
+        self.title = @"Scrollx";
+        self.tabBarItem.image = [UIImage imageNamed:@"first_normal"];
+        self.tabBarItem.title=@"scrolls";
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    [[self rdv_tabBarItem] setBadgeValue:@"3"];
+    
     self.imageView=[UIView new];//[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bigPic"]];
     
     self.imageView.frame=CGRectMake(0, 0, 400, 600);

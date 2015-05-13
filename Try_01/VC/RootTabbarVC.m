@@ -43,6 +43,7 @@
                                                         [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         [item setTitle:[titles objectAtIndex:index]];
+       // [item setBadgeValue:  [NSString stringWithFormat: @"%d", index  ]];
         index++;
     }
     

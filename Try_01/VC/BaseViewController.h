@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "RDVTabBarItem.h"
+#import "RDVTabBarController.h"
+@interface BaseViewController : UIViewController
 
 @property (strong,nonatomic ) UIButton *firstButton;
 @property (strong,nonatomic ) UIButton *secondButton;
