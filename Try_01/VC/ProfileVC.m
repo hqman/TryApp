@@ -12,6 +12,7 @@
 #import "RACEXTScope.h"
 #import "HWCricleView.h"
 #import "HWLayoutVC.h"
+#import "Masonry.h"
 
 @interface ProfileVC ()
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
@@ -43,6 +44,28 @@
          self.title = @"Profile";
          NSLog(@"click me");
      }];
+    
+    
+    UIView *redView=[UIView new];
+    redView.backgroundColor=[UIColor colorWithRed:1.000 green:0.329 blue:0.633 alpha:1.000];
+    [self.view addSubview:redView];
+    
+    
+    WS(ws)
+    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(@150);
+        //make.leading.equalTo(ws.view).with.offset(50);
+        make.left.equalTo(@50);
+//        make.centerX.equalTo(ws.view.mas_centerX);
+//        make.centerY.equalTo(ws.view.mas_centerY);
+        make.height.mas_equalTo(@200);
+        make.width.greaterThanOrEqualTo(@200);
+    }];
+    
+    [self  addNaturalOnTopEffectWithMaximumRelativeValue:50 view:redView];
+//[self  addNaturalBelowEffectWithMaximumRelativeValue:25 view:_aButton];
+
     //draw view
    // HWCricleView *subView=[[HWCricleView alloc]initWithFrame:self.view.bounds];
     //subView.backgroundColor=[UIColor redColor];
@@ -81,5 +104,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)addNaturalOnTopEffectWithMaximumRelativeValue:(CGFloat)maximumRealtiveValue view:(UIView *)view{
+    UIInterpolatingMotionEffect* motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    motionEffect.minimumRelativeValue = @(maximumRealtiveValue);
+    motionEffect.maximumRelativeValue = @(-maximumRealtiveValue);
+    [view addMotionEffect:motionEffect];
+    motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    motionEffect.minimumRelativeValue = @(maximumRealtiveValue);
+    motionEffect.maximumRelativeValue = @(-maximumRealtiveValue);
+    [view addMotionEffect:motionEffect];
+}
+
+- (void)addNaturalBelowEffectWithMaximumRelativeValue:(CGFloat)maximumRealtiveValue view:(UIView *)view{
+    UIInterpolatingMotionEffect* motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    motionEffect.minimumRelativeValue = @(-maximumRealtiveValue);
+    motionEffect.maximumRelativeValue = @(maximumRealtiveValue);
+    [view addMotionEffect:motionEffect];
+    motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    motionEffect.minimumRelativeValue = @(-maximumRealtiveValue);
+    motionEffect.maximumRelativeValue = @(maximumRealtiveValue);
+    [view addMotionEffect:motionEffect];
+}
 
 @end
