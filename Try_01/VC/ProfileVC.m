@@ -36,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+   
+    
     // button event 触发 事件 & 实现
     
     @weakify(self)
@@ -61,8 +63,8 @@
         make.left.equalTo(@50);
 //        make.centerX.equalTo(ws.view.mas_centerX);
 //        make.centerY.equalTo(ws.view.mas_centerY);
-        make.height.mas_equalTo(@200);
-        make.width.greaterThanOrEqualTo(@200);
+        make.height.mas_equalTo(@50);
+        make.width.greaterThanOrEqualTo(@30);
     }];
     
     [self  addNaturalOnTopEffectWithMaximumRelativeValue:50 view:redView];
@@ -73,6 +75,7 @@
     //subView.backgroundColor=[UIColor redColor];
    // [self.view addSubview:subView];
 }
+
 
 
 
@@ -97,6 +100,10 @@
  
 - (IBAction)takePIc:(id)sender {
     
+    
+   
+    
+    
     UIImagePickerController *pvc=[UIImagePickerController new];
     pvc.delegate=self;
     
@@ -109,7 +116,18 @@
 
     }
     
-    [self presentViewController:pvc animated:YES completion:nil];
+    
+    if([[[UIDevice
+          currentDevice] systemVersion] floatValue]>=8.0) {
+        NSLog(@"UIDevice 8 ");
+        pvc .modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        
+    }
+    
+  [self presentViewController:pvc animated:YES completion:nil];
+    
+    
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{

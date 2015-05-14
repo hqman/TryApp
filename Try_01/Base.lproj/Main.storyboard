@@ -38,7 +38,7 @@
                                 </state>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYg-h4-1j6">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="380" width="600" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="7Ft-D0-x2k">
                                         <connections>
@@ -48,7 +48,8 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dG-Jd-h0f">
-                                <rect key="frame" x="155" y="406" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="252" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.86846253059594714" green="1" blue="0.80761926142926144" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
