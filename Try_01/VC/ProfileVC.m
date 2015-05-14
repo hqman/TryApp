@@ -14,7 +14,9 @@
 #import "HWLayoutVC.h"
 #import "Masonry.h"
 
-@interface ProfileVC ()
+
+@interface ProfileVC ()<UINavigationBarDelegate,UIImagePickerControllerDelegate >
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *aButton;
@@ -91,7 +93,36 @@
 }
 
 
+#pragma mark - ImagePicker
  
+- (IBAction)takePIc:(id)sender {
+    
+    UIImagePickerController *pvc=[UIImagePickerController new];
+    pvc.delegate=self;
+    
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        
+        pvc.sourceType=UIImagePickerControllerSourceTypeCamera;
+    }else{
+        pvc.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+
+    }
+    
+    [self presentViewController:pvc animated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image=info[UIImagePickerControllerOriginalImage];
+    
+    _myImageView.image=image;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    NSLog(@" %@ ",@"cancel pick");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
  

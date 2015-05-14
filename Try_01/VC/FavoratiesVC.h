@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavoratiesVC : UIViewController
+@interface FavoratiesVC : UITableViewController
 
 @end
+
+
+
+
+ 

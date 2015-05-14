@@ -20,6 +20,9 @@
 		E561811D1B009E1B00DF80D5 /* HWCenteredScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */; };
 		E577F8031B01DB73002CC800 /* HWLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E577F8021B01DB73002CC800 /* HWLayoutVC.m */; };
 		E58170401AF9A23100661F73 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581703F1AF9A23000661F73 /* SenTestingKit.framework */; };
+		E598B4FF1B03468700799ED6 /* Testt.xib in Resources */ = {isa = PBXBuildFile; fileRef = E598B4FE1B03468700799ED6 /* Testt.xib */; };
+		E598B5421B03839000799ED6 /* HWItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E598B5401B03839000799ED6 /* HWItemCell.m */; };
+		E598B5431B03839000799ED6 /* HWItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E598B5411B03839000799ED6 /* HWItemCell.xib */; };
 		E5A09CC01AFB6FD300F1519B /* RACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A09CBF1AFB6FD300F1519B /* RACTests.m */; };
 		E5B3C14C1AFA44AE00BC0B3C /* HWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C14B1AFA44AE00BC0B3C /* HWManager.m */; };
 		E5B3C1521AFA51E800BC0B3C /* HWManager+Question.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B3C1511AFA51E800BC0B3C /* HWManager+Question.m */; };
@@ -78,6 +81,10 @@
 		E577F8011B01DB73002CC800 /* HWLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLayoutVC.h; sourceTree = "<group>"; };
 		E577F8021B01DB73002CC800 /* HWLayoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLayoutVC.m; sourceTree = "<group>"; };
 		E581703F1AF9A23000661F73 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E598B4FE1B03468700799ED6 /* Testt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Testt.xib; sourceTree = "<group>"; };
+		E598B53F1B03839000799ED6 /* HWItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWItemCell.h; sourceTree = "<group>"; };
+		E598B5401B03839000799ED6 /* HWItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWItemCell.m; sourceTree = "<group>"; };
+		E598B5411B03839000799ED6 /* HWItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWItemCell.xib; sourceTree = "<group>"; };
 		E59F6AD51AF3523B00B55D5A /* TryApp.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryApp.pch; sourceTree = "<group>"; };
 		E5A09CBF1AFB6FD300F1519B /* RACTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTests.m; sourceTree = "<group>"; };
 		E5A09CE31AFF007300F1519B /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -180,6 +187,7 @@
 		E5415C221AE616360040997F /* TryApp */ = {
 			isa = PBXGroup;
 			children = (
+				E598B4FE1B03468700799ED6 /* Testt.xib */,
 				E5B3C1491AFA448600BC0B3C /* Managers */,
 				E5B3C1481AFA445C00BC0B3C /* HWApi.h */,
 				E5CC11541AF32AF5004DF4B2 /* Vendors */,
@@ -279,6 +287,9 @@
 				E561811C1B009E1B00DF80D5 /* HWCenteredScrollView.m */,
 				E511A3D91B00450500B86A5B /* HWCricleView.h */,
 				E511A3DA1B00450500B86A5B /* HWCricleView.m */,
+				E598B53F1B03839000799ED6 /* HWItemCell.h */,
+				E598B5401B03839000799ED6 /* HWItemCell.m */,
+				E598B5411B03839000799ED6 /* HWItemCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,6 +417,8 @@
 			files = (
 				E5415C2F1AE616360040997F /* Main.storyboard in Resources */,
 				E5CC115A1AF32B1E004DF4B2 /* README.textile in Resources */,
+				E598B4FF1B03468700799ED6 /* Testt.xib in Resources */,
+				E598B5431B03839000799ED6 /* HWItemCell.xib in Resources */,
 				E5415C341AE616360040997F /* LaunchScreen.xib in Resources */,
 				E5415C311AE616360040997F /* Images.xcassets in Resources */,
 			);
@@ -518,6 +531,7 @@
 				E5415C291AE616360040997F /* AppDelegate.m in Sources */,
 				E5DC572F1AE6407F00316FAD /* ProfileVC.m in Sources */,
 				E5DC57351AE64D8C00316FAD /* UIColor+expanded.m in Sources */,
+				E598B5421B03839000799ED6 /* HWItemCell.m in Sources */,
 				E5CC11531AF329C9004DF4B2 /* NSDate+convenience.m in Sources */,
 				E5DC57381AE64DCF00316FAD /* UIImage+Common.m in Sources */,
 				E511A3DB1B00450500B86A5B /* HWCricleView.m in Sources */,

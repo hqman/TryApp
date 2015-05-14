@@ -9,10 +9,10 @@
 #import "FavoratiesVC.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Person.h"
+#import "HWItemCell.h"
 
-
-
-@interface FavoratiesVC ()
+static NSString *CellIdentifier = @"HWItemCell";
+@interface FavoratiesVC ()<UITableViewDataSource>
 @property (strong ,nonatomic) UILabel * aLabel;
 
 @property (strong ,nonatomic) UIImageView * imageView;
@@ -23,62 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSLog(@" FavoratiesVC viewDidLoad");
-    // Do any additional setup after loading the view.
-    NSString *json_url=@"http://courseware.codeschool.com.s3.amazonaws.com/try_ios/level6demo/userProfile.json";
-    // 2
-    NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-    // 3
-    NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:nil];
-
-    
-    NSURLSessionDataTask *jsonData = [session dataTaskWithURL: [NSURL URLWithString:json_url]
-                                            completionHandler:^(NSData *data,
-                                                                NSURLResponse *response,
-                                                                NSError *error) {
-                                                // 1
-                                                NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
-                                                if (httpResp.statusCode == 200) {
-                                                    
-                                                    NSError *jsonError;
-                                                    
-                                                    // 2
-                                                    NSDictionary *notesJSON =
-                                                    [NSJSONSerialization JSONObjectWithData:data
-                                                                                    options:NSJSONReadingAllowFragments                                                                             
-                                                                                      error:&jsonError];
-                                                    
-                                                    //NSMutableArray *notesFound = [[NSMutableArray alloc] init];
-                                                    NSLog(@"NSURLSessionDataTask: \n %@",notesJSON);
-                                                                                                        if (!jsonError) {
-                                                        // TODO 2: More coming here!
-                                                    }
-                                                }
-                                            }];
-    [jsonData resume];
-    
-    //NSURL *url = [[NSURL alloc] initWithString:@"http://courseware.codeschool.com.s3.amazonaws.com/try_ios/level6demo/userProfile.json"];
-    
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [manager GET:@"http://courseware.codeschool.com.s3.amazonaws.com/try_ios/level6demo/userProfile.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"JSON: %@",  responseObject   );
-//        
-//        NSLog(@"%@",[responseObject valueForKey:@"city"]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@", error);
-//    }];
+     
     
     
-    _aLabel= [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
-    _aLabel.backgroundColor = [UIColor clearColor];
-    _aLabel.font = [UIFont boldSystemFontOfSize:17];
-    _aLabel.textAlignment = NSTextAlignmentCenter;
-    _aLabel.text = @"a lable";
-    [self.view addSubview:_aLabel];
+    //[self setUpImageView];
     
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    UINib *nib=[UINib nibWithNibName:CellIdentifier bundle:nil];
     
-    [self setUpImageView];
+    [self.tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reflesh:) name:SaveNotificationKey object:nil];
     }
@@ -103,9 +56,30 @@
     }
     return self;
 }
+#pragma mark - UITableViewDataSource
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 8;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+   // static NSString *CellIdentifier = @"HWItemCell";
+    HWItemCell *cell=[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    cell.selectionStyle=UITableViewCellStyleValue1;
+//    cell.textLabel.text=@"wangkai";
+//    cell.detailTextLabel.text=@"In a storyboard-based application  do a little preparation before navigation";
+    
+    cell.nameLabel.text=@"wangkai";
+    cell.snLabel.text=@"23434635463";
+    cell.valueLabel.text=@"2.3";
+    cell.thumbView.image=[UIImage imageNamed:@"placeholder"];
+    tableView.rowHeight=100;
+    return cell;
+}
+    
 /*
 #pragma mark - Navigation
+ 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -113,6 +87,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 
 -(void) setUpImageView {
     
@@ -125,7 +102,7 @@
     // 3
     NSURLSession *session =
     [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:nil];
-    
+    //NSLog(@" %@ ",<#v#>);
     
     // 1
     NSURLSessionDownloadTask *getImageTask =
