@@ -112,6 +112,7 @@
     
     __weak typeof(self) weakSelf = self;
     UIActionSheet *actionSheet = [UIActionSheet bk_actionSheetWithTitle:nil];
+    //actionSheet.actionSheetStyle=
     [actionSheet bk_addButtonWithTitle:@"拍照" handler:nil];
     [actionSheet bk_addButtonWithTitle:@"相册选择" handler:nil];
     [actionSheet bk_setCancelButtonWithTitle:@"取消" handler:nil];

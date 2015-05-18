@@ -74,6 +74,8 @@ typedef int (^CompleteHandler)(UIImageView *image_view);
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //int count;
+    //return count;
     return 8;
 }
 
